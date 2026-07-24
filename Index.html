@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Sahar Fatima, AI Engineer." />
+  <title>Sahar Fatima | AI Engineer</title>
+  
+  <!-- Professional Custom Favicon using an embedded SVG Data URI (Glowing AI Circuit/Brain Icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2307101d'/><circle cx='50' cy='50' r='28' fill='none' stroke='%234bb6ff' stroke-width='6'/><circle cx='50' cy='50' r='10' fill='%235eead4'/><path d='M50 12v10M50 78v10M12 50h10M78 50h10' stroke='%239c7bff' stroke-width='6' stroke-linecap='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#07101d; --surface:#0d192a; --line:rgba(190,215,255,.14); --text:#f2f7ff; --muted:#aab7ca; --blue:#4bb6ff; --violet:#9c7bff; --mint:#5eead4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--text); background:var(--bg); font-family:Manrope,Arial,sans-serif; overflow-x:hidden; }
+    body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.48; background:radial-gradient(circle at 10% 0%,rgba(75,182,255,.17),transparent 30rem),radial-gradient(circle at 88% 14%,rgba(156,123,255,.15),transparent 28rem),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px); background-size:auto,auto,42px 42px,42px 42px; }
+    .container { width:min(1120px,calc(100% - 40px)); margin:auto; position:relative; }
+    
+    /* Full-width sticky navigation bar styling fix */
+    .nav-wrapper { position:sticky; top:0; z-index:20; background:rgba(7,16,29,.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--line); width:100%; }
+    nav { height:82px; display:flex; justify-content:space-between; align-items:center; width:min(1120px,calc(100% - 40px)); margin:auto; }
+    
+    /* Enhanced, Professional, and Highlighted Logo Styling */
+    .logo { text-decoration:none; color:var(--text); font-weight:800; letter-spacing:-0.5px; font-size:22px; display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:10px; background:rgba(75,182,255,0.06); border:1px solid rgba(75,182,255,0.2); transition:all 0.25s ease; }
+    .logo:hover { border-color:var(--blue); box-shadow:0 0 20px rgba(75,182,255,0.2); transform:translateY(-1px); }
+    .logo-badge { width:8px; height:8px; background:var(--mint); border-radius:50%; box-shadow:0 0 10px var(--mint); }
+    .logo span { background:linear-gradient(135deg, var(--blue), var(--mint)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+
+    .links { display:flex; gap:22px; }
+    .links a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:600; }
+    .links a:hover { color:var(--text); }
+    .hero { min-height:670px; display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:44px; }
+    .eyebrow, .label { color:var(--mint); font-family:'DM Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { font-size:clamp(46px,7vw,82px); line-height:1.02; letter-spacing:-.065em; margin:18px 0 24px; max-width:750px; }
+    h1 em { font-style:normal; color:var(--blue); }
+    .hero p { color:var(--muted); max-width:610px; font-size:18px; line-height:1.75; }
+    .buttons { display:flex; gap:13px; margin-top:34px; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; color:var(--text); padding:13px 19px; border-radius:10px; font-size:14px; font-weight:700; border:1px solid var(--line); transition:.2s ease; }
+    .btn.primary { background:var(--blue); color:#041221; border-color:var(--blue); }
+    .btn:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,.22); }
+    .orb { width:min(360px,76vw); aspect-ratio:1; border-radius:50%; position:relative; margin-left:auto; background:radial-gradient(circle at 38% 32%,#b9f7ff 0 2%,#4bb6ff 13%,#162f68 38%,#0a1529 63%,transparent 64%); box-shadow:inset -16px -18px 40px #02060d,0 0 70px rgba(75,182,255,.25); animation:float 5s ease-in-out infinite; }
+    .orb:before,.orb:after { content:""; position:absolute; border:1px solid rgba(135,221,255,.4); border-radius:50%; inset:-22px; transform:rotateX(68deg); }
+    .orb:after { inset:-52px 16px; transform:rotateY(68deg); border-color:rgba(166,136,255,.4); }
+    @keyframes float { 50% { transform:translateY(-13px) rotate(2deg); } }
+    section { padding:100px 0; border-top:1px solid var(--line); }
+    h2 { font-size:clamp(30px,4vw,48px); letter-spacing:-.05em; margin:12px 0 18px; }
+    .section-intro { color:var(--muted); max-width:650px; line-height:1.7; margin-bottom:38px; }
+    .about { display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; align-items:start; }
+    .bio { color:var(--muted); font-size:17px; line-height:1.85; margin:0; }
+    .skills { display:flex; flex-wrap:wrap; gap:10px; margin-top:25px; }
+    .skill { padding:9px 12px; border-radius:7px; background:rgba(255,255,255,.04); border:1px solid var(--line); color:#cfdaea; font-family:'DM Mono',monospace; font-size:12px; }
+    .projects { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .project { min-height:290px; padding:25px; background:linear-gradient(145deg,rgba(20,39,65,.92),rgba(9,19,33,.9)); border:1px solid var(--line); border-radius:15px; display:flex; flex-direction:column; transition:.25s ease; text-decoration:none; color:inherit; }
+    .project:hover { transform:translateY(-7px); border-color:rgba(75,182,255,.55); }
+    .number { color:var(--blue); font-family:'DM Mono',monospace; font-size:12px; }
+    .project h3 { margin:31px 0 10px; letter-spacing:-.035em; font-size:22px; }
+    .project p { color:var(--muted); font-size:14px; line-height:1.65; margin:0; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; padding-top:22px; }
+    .tags span { color:var(--mint); font-family:'DM Mono',monospace; font-size:11px; }
+    .experience { display:grid; gap:14px; }
+    .role { display:grid; grid-template-columns:150px 1fr; gap:24px; padding:24px 0; border-bottom:1px solid var(--line); }
+    .role time { color:var(--blue); font-family:'DM Mono',monospace; font-size:12px; padding-top:5px; }
+    .role h3 { margin:0; font-size:18px; }
+    .role h3 span { color:var(--muted); font-weight:500; }
+    .role p { color:var(--muted); font-size:14px; line-height:1.7; margin:9px 0 0; }
+    
+    /* Certifications Grid Layout */
+    .cert-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .cert-card { padding:22px; background:linear-gradient(145deg,rgba(20,39,65,.92),rgba(9,19,33,.9)); border:1px solid var(--line); border-radius:12px; display:flex; flex-direction:column; gap:8px; transition:.25s ease; }
+    .cert-card:hover { transform:translateY(-5px); border-color:rgba(75,182,255,.55); }
+    .cert-issuer { color:var(--mint); font-family:'DM Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; }
+    .cert-card h3 { margin:0; font-size:17px; letter-spacing:-.02em; }
+    .cert-card p { color:var(--muted); font-size:13px; margin:0; line-height:1.5; }
+
+    .contact { text-align:center; padding:120px 0; }
+    .contact h2 { max-width:700px; margin:12px auto 20px; }
+    .contact p { color:var(--muted); }
+    footer { padding:25px 0; color:#77859a; border-top:1px solid var(--line); font-family:'DM Mono',monospace; font-size:11px; display:flex; justify-content:space-between; }
+    @media(max-width:760px) { .links { display:none; } .hero,.about { grid-template-columns:1fr; } .hero { padding:80px 0; min-height:auto; } .orb { margin:10px auto 40px; order:-1; width:240px; } .projects, .cert-grid { grid-template-columns:1fr; } .role { grid-template-columns:1fr; gap:7px; } footer { gap:10px; flex-direction:column; } }
+  </style>
+</head>
+<body>
+
+  <!-- Full-width sticky navigation bar with Highlighted Professional Logo -->
+  <div class="nav-wrapper">
+    <nav>
+      <a class="logo" href="#home">
+        <div class="logo-badge"></div>
+        Sahar <span>Fatima</span>
+      </a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <main id="home">
+      <section class="hero" style="border-top:0; padding-top:0; padding-bottom:0;">
+        <div>
+          <div class="eyebrow">AI Engineer · Machine Learning · LLMs</div>
+          <h1>Building <em>intelligent</em> systems for real-world impact.</h1>
+          <p>I’m Sahar Fatima, an AI Engineer focused on creating useful, reliable AI products—from predictive models to conversational applications powered by large language models.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#projects">View my work ↓</a>
+            <a class="btn" href="mailto:syedasahar170@gmail.com">Get in touch ↗</a>
+          </div>
+        </div>
+        <div class="orb" aria-label="Abstract artificial intelligence visual"></div>
+      </section>
+
+      <section id="about">
+        <div class="about">
+          <div>
+            <div class="label">01 / About me</div>
+            <h2>Curious by nature. Driven by data.</h2>
+          </div>
+          <div>
+            <p class="bio">I enjoy turning complex data and emerging AI technologies into experiences people can actually use. My work combines thoughtful problem-solving with a practical approach to machine learning, NLP, and intelligent automation.</p>
+            <div class="skills">
+              <span class="skill">Python</span><span class="skill">React.js</span><span class="skill">PyTorch</span><span class="skill">TensorFlow</span><span class="skill">Scikit-learn</span><span class="skill">LLMs</span><span class="skill">LangChain</span><span class="skill">FastAPI</span><span class="skill">SQL</span><span class="skill">Docker</span><span class="skill">Git</span><span class="skill">Agentic AI</span><span class="skill">PostgreSQL</span><span class="skill">RAG</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="label">02 / Selected work</div>
+        <h2>Projects that make AI useful.</h2>
+        <p class="section-intro">A selection of concepts and end-to-end builds spanning language models, intelligent web applications, and predictive analytics.</p>
+        <div class="projects">
+          <!-- Project 1: Library Chatbot Backend -->
+          <a class="project" href="https://github.com/SaharFatima17/FASTAPI_Backend" target="_blank" rel="noreferrer">
+            <div class="number">01 — BACKEND APPLICATION</div>
+            <h3>Library Chatbot Backend</h3>
+            <p>A robust FastAPI backend service designed to power an interactive library assistant, handling conversational logic and efficient data responses.</p>
+            <div class="tags"><span>PYTHON</span><span>FASTAPI</span><span>REST API</span></div>
+          </a>
+          
+          <!-- Project 2: Library Chatbot Frontend -->
+          <a class="project" href="https://github.com/SaharFatima17/FASTAPI_Frontend" target="_blank" rel="noreferrer">
+            <div class="number">02 — FRONTEND INTERFACE</div>
+            <h3>Library Chatbot Frontend</h3>
+            <p>A responsive user interface built to seamlessly connect with the library assistant backend, offering users a smooth conversational experience.</p>
+            <div class="tags"><span>HTML/CSS</span><span>JAVASCRIPT</span><span>UI/UX</span></div>
+          </a>
+          
+          <!-- Project 3: Fake News Detection Using AI -->
+          <a class="project" href="https://github.com/SaharFatima17/FakeNewsDetection_using_AI" target="_blank" rel="noreferrer">
+            <div class="number">03 — MACHINE LEARNING</div>
+            <h3>Fake News Detection</h3>
+            <p>An intelligent classification model designed to analyze articles and accurately identify misinformation using natural language processing techniques.</p>
+            <div class="tags"><span>PYTHON</span><span>NLP</span><span>SCIKIT-LEARN</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="label">03 / Journey</div>
+        <h2>Experience & learning.</h2>
+        <div class="experience">
+          <div class="role">
+            <time>2026 — Present</time>
+            <div>
+              <h3>AI Engineer Intern <span>/ Zylo Technologies</span></h3>
+              <p>Developing advanced AI architectures and scalable systems, specializing in Retrieval-Augmented Generation (RAG), Agentic AI workflows, Large Language Models (LLMs), LangSmith tracing, Redis for caching/state, and Celery for asynchronous task processing.</p>
+            </div>
+          </div>
+          <div class="role">
+            <time>2025 — 2025</time>
+            <div>
+              <h3>Machine Learning Student <span>/ Ideoversity</span></h3>
+              <p>Conducted comprehensive data preprocessing, algorithmic experimentation, and performance evaluation for diverse machine learning projects.</p>
+            </div>
+          </div>
+          <div class="role">
+            <time>Education</time>
+            <div>
+              <h3>BS in Computer Science <span>/ University of Gujarat</span></h3>
+              <p>Focused on core computer science foundations, software engineering principles, and artificial intelligence specializations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications">
+        <div class="label">04 / Credentials</div>
+        <h2>Licenses & Certifications.</h2>
+        <p class="section-intro">Professional training and certifications completed across specialized artificial intelligence, data science, and modern engineering programs.</p>
+        
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-issuer">Ideoversity · Arfa Tower Lahore</div>
+            <h3>AI/ML Professional Training</h3>
+            <p>Comprehensive 6-month hands-on program covering machine learning pipelines, algorithms, and practical AI implementations.</p>
+          </div>
+          
+          <div class="cert-card">
+            <div class="cert-issuer">UiPath</div>
+            <h3>Agentic Prompt Engineering</h3>
+            <p>Specialized training focused on advanced prompt engineering techniques for autonomous agentic workflows.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>AI for App Building</h3>
+            <p>Core methodologies and practical concepts for designing and integrating intelligence into modern application architectures.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>AI for Data Analysis</h3>
+            <p>Leveraging artificial intelligence tools to optimize, accelerate, and extract insights from complex datasets.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>AI for Writing and Communicating</h3>
+            <p>Enhancing technical and professional communication workflows utilizing generative AI models.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>AI for Research and Insights</h3>
+            <p>Applying modern AI capabilities to streamline background research, discovery, and pattern recognition.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>AI for Brainstorming and Planning</h3>
+            <p>Using AI systems as collaborative assistants for strategic planning, ideation, and project mapping.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>AI Fundamentals</h3>
+            <p>Foundational principles, core concepts, and operational mechanics of modern artificial intelligence systems.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>Crash Course on Python</h3>
+            <p>Core programming fundamentals, data structures, and script writing automation using Python.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-issuer">Google / Coursera</div>
+            <h3>Foundations of Data Science</h3>
+            <p>Introduction to data analysis lifecycles, statistical evaluation, and exploratory data techniques.</p>
+          </div>
+
+          <div class="cert-card" style="grid-column: 1 / -1;">
+            <div class="cert-issuer">Namsa Academy</div>
+            <h3>Microsoft Management Office Training</h3>
+            <p>Advanced administrative operations, professional document management, and workflow optimization.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="label">05 / Contact</div>
+        <h2>Have a challenging problem? Let’s build the solution.</h2>
+        <p>I’m open to opportunities, collaborations, and meaningful AI projects.</p>
+        <div class="buttons" style="justify-content:center;">
+          <a class="btn primary" href="mailto:syedasahar170@gmail.com">syedasahar170@gmail.com ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/syedasaharfatima17" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/SaharFatima17" target="_blank" rel="noreferrer">GitHub ₂</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 Sahar Fatima</span>
+      <span>DESIGNED FOR THE FUTURE</span>
+    </footer>
+  </div>
+</body>
+</html>
